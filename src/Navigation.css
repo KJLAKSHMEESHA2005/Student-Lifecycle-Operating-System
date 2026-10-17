@@ -1,0 +1,52 @@
+.sidebar {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: #5c7f71 #173b34;
+  scrollbar-width: thin;
+}
+
+.roster-import-summary {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 6px;
+  padding: 13px 14px;
+  border-left: 3px solid #4b9873;
+  background: #edf5ed;
+  color: #315b44;
+  font-size: 12px;
+}
+
+.roster-import-summary span,
+.roster-import-summary small {
+  color: #63766a;
+  font-size: 11px;
+}
+
+.roster-import-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.roster-import-actions .auth-submit {
+  grid-column: auto;
+  margin-top: 0;
+}
+
+@media (max-width: 560px) {
+  .roster-import-actions {
+    grid-column: 1;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .roster-import-actions > button {
+    justify-content: center;
+  }
+}

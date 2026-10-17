@@ -1,0 +1,3 @@
+ALTER TABLE students
+  ALTER COLUMN roll_number DROP NOT NULL,
+  ALTER COLUMN email DROP NOT NULL;

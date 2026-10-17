@@ -1,0 +1,57 @@
+{
+  "name": "student-lifecycle-os",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:api": "tsx watch server/index.ts",
+    "start": "tsx server/index.ts",
+    "dev:mobile": "npm --prefix mobile start",
+    "build": "tsc -b && npm run typecheck:server && vite build",
+    "test:auth": "node --import tsx --test server/totp.test.ts",
+    "test:csv": "node --import tsx --test server/csv-import.test.ts",
+    "test:gemini": "node --import tsx --test server/gemini.test.ts",
+    "test:packages": "node --import tsx --test server/package-compat.test.ts",
+    "typecheck:server": "tsc --ignoreConfig --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --allowImportingTsExtensions --esModuleInterop --skipLibCheck server/index.ts server/totp.ts",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:import-students": "tsx scripts/import-students.ts",
+    "db:import-students-xlsx": "tsx scripts/import-students-xlsx.ts",
+    "db:import-timetable": "tsx scripts/import-timetable.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "csv-parse": "^7.0.3",
+    "dotenv": "^18.0.4",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
+    "express-rate-limit": "^7.5.1",
+    "lucide-react": "^1.48.0",
+    "otplib": "^13.5.0",
+    "pg": "^8.23.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tsx": "^4.23.15"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.13.3",
+    "@types/pg": "^8.23.1",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "^11.1.1"
+    }
+  }
+}

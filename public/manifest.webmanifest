@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "Student Lifecycle OS",
+  "short_name": "Student OS",
+  "description": "Courses, coursework, learning materials, and academic progress.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f7f4",
+  "theme_color": "#173b34",
+  "icons": [
+    {
+      "src": "/student-lms-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
