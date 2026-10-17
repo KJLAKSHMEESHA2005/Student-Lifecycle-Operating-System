@@ -1,4 +1,4 @@
-# Student Lifecycle OS
+# Student-Lifecycle-Operating-System
 
 A centralized academic lifecycle system for a college or university. PostgreSQL is the source of truth for students, programs, faculty, terms, courses, sections, schedules, enrollments, attendance, assessments, materials, announcements, and student records. The student portal reads the relational model through a TypeScript API.
 
